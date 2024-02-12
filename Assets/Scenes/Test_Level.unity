@@ -263,7 +263,7 @@ Transform:
   m_GameObject: {fileID: 153221748}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5843686, y: -4.577, z: -10}
+  m_LocalPosition: {x: 1.5843685, y: -4.577, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2918cc4ea16b8438b7de9b6321ac36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1261023180}
+  health: {fileID: 1261023180}
   damage: 1
 --- !u!61 &241109206
 BoxCollider2D:
@@ -389,7 +389,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 529493784, guid: 36612723202472d4cb6cd958ef95f135, type: 3}
+  m_Sprite: {fileID: -1597599052, guid: 36612723202472d4cb6cd958ef95f135, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -814,7 +814,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5843686, y: -4.577, z: -10}
+  m_LocalPosition: {x: 1.5843685, y: -4.577, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17611,7 +17611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2918cc4ea16b8438b7de9b6321ac36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1261023180}
+  health: {fileID: 1261023180}
   damage: 1
 --- !u!61 &1249742387
 BoxCollider2D:
@@ -17699,7 +17699,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 529493784, guid: 36612723202472d4cb6cd958ef95f135, type: 3}
+  m_Sprite: {fileID: -1597599052, guid: 36612723202472d4cb6cd958ef95f135, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17740,7 +17740,6 @@ GameObject:
   - component: {fileID: 1261023178}
   - component: {fileID: 1261023176}
   - component: {fileID: 1261023180}
-  - component: {fileID: 1261023181}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -17932,23 +17931,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837276901e97e2f4380fe6fec9c29773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1261023177}
   health: 0
   maxHealth: 5
---- !u!114 &1261023181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261023171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7c03806d01cbc4449c51b127f101db3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 1261023177}
-  knockbackForce: 10
-  knockbackDuration: 0.5
 --- !u!1 &1508629017
 GameObject:
   m_ObjectHideFlags: 0
@@ -17959,7 +17944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1508629018}
   m_Layer: 0
-  m_Name: traps
+  m_Name: Traps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18133,7 +18118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2918cc4ea16b8438b7de9b6321ac36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1261023180}
+  health: {fileID: 1261023180}
   damage: 1
 --- !u!61 &1642971265
 BoxCollider2D:
@@ -18221,7 +18206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 529493784, guid: 36612723202472d4cb6cd958ef95f135, type: 3}
+  m_Sprite: {fileID: -1597599052, guid: 36612723202472d4cb6cd958ef95f135, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
