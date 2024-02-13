@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck_2;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
+    [SerializeField] private TrailRenderer trailRenderer;
 
     [Header("Movement Settings")]
     [SerializeField] private float speed = 8f; 
@@ -18,10 +20,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float KBCounter;
     [SerializeField] private float KBTotalTime;
 
-    private bool KnockFromRight;
-    private Rigidbody2D rb;
-    private float horizontalInput;
-    private bool isFacingRight = true;
+    [Header("Dash Settings")]
+    [SerializeField] private float dashingForce;
+    [SerializeField] private float dashingTime;
+    [SerializeField] private float dashingCooldown;
+
+    private bool canDash = true; //Dash
+    private bool isDashing; //Dash
+    private bool KnockFromRight; //Knockback
+    private Rigidbody2D rb; //Rigidbody
+    private float horizontalInput; //Movement
+    private bool isFacingRight = true; //Flipping
 
     private void Start()
     {
@@ -31,14 +40,22 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()))
+        if(!isDashing)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
-        }
+            if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
+            }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            {
+                StartCoroutine(Dash());
+            }
         }
 
         animator.SetFloat("Horizontal Speed", Mathf.Abs(rb.velocity.x));
@@ -53,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
         
         if(KBCounter <= 0)
         {
+            if (isDashing)
+                return;
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
         }
         else
@@ -99,5 +118,21 @@ public class PlayerMovement : MonoBehaviour
     public void KnockbackDirection(bool direction)
     {
         KnockFromRight = direction;
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingForce, 0f);
+        trailRenderer.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        trailRenderer.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 }
