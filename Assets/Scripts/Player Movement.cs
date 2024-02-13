@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,10 +9,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
 
-    [Header("Settings")]
+    [Header("Movement Settings")]
     [SerializeField] private float speed = 8f; 
     [SerializeField] private float jumpingForce = 16f;
 
+    [Header("Knockback Settings")]
+    [SerializeField] private float KBForce;
+    [SerializeField] private float KBCounter;
+    [SerializeField] private float KBTotalTime;
+
+    private bool KnockFromRight;
     private Rigidbody2D rb;
     private float horizontalInput;
     private bool isFacingRight = true;
@@ -43,7 +50,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        
+        if(KBCounter <= 0)
+        {
+            rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        }
+        else
+        {
+            if(KnockFromRight == true)
+            {
+                rb.velocity = new Vector2(-KBForce, KBForce);
+            }
+            if(KnockFromRight == false)
+            {
+                rb.velocity = new Vector2(KBForce, KBForce);
+            }
+
+            KBCounter -= Time.deltaTime;
+        }
     }
 
     private bool IsGrounded_1()
@@ -65,5 +89,15 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    public void Knockback()
+    {
+        KBCounter = KBTotalTime;
+    }
+
+    public void KnockbackDirection(bool direction)
+    {
+        KnockFromRight = direction;
     }
 }

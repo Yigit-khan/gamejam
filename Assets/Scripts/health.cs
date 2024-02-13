@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private Animator animator;
     [SerializeField] private Slider slider;
 
-    public int health;
-    public int maxHealth = 5;
+    [Header("Settings")]
+    [SerializeField] private int health;
+    [SerializeField] private int maxHealth = 5;
 
     void Start()
     {
