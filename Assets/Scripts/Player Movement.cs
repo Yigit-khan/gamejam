@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float KBTotalTime;
 
     [Header("Dash Settings")]
+    [SerializeField] private bool dashIsEnabled;
     [SerializeField] private float dashingForce;
     [SerializeField] private float dashingTime;
     [SerializeField] private float dashingCooldown;
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
             {
                 StartCoroutine(Dash());
             }

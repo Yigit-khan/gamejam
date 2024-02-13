@@ -22170,6 +22170,7 @@ MonoBehaviour:
   KBForce: 6
   KBCounter: 0
   KBTotalTime: 0.2
+  dashIsEnabled: 1
   dashingForce: 20
   dashingTime: 0.2
   dashingCooldown: 0.5
