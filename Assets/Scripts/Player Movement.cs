@@ -7,9 +7,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform groundCheck_1;
     [SerializeField] private Transform groundCheck_2;
+    [SerializeField] private Transform shootPoint;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
     [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject temporaryObjects;
 
     [Header("Movement Settings")]
     [SerializeField] private float speed = 8f; 
@@ -26,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashingTime;
     [SerializeField] private float dashingCooldown;
 
+    [Header("Shooting Settings")]
+    [SerializeField] private bool shootingEnabled;
+    [SerializeField] private float bulletSpeed;
+    [SerializeField] private float fireRate;
+    
+    
+    private float nextTimeToFire; //Shoot
+    private float shootTime; //Shoot
     private bool canDash = true; //Dash
     private bool isDashing; //Dash
     private bool KnockFromRight; //Knockback
@@ -36,26 +47,23 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        nextTimeToFire = 1 / fireRate;
+        shootTime = 0;
     }
     void Update()
     {
+        shootTime += Time.deltaTime;
+
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
         if(!isDashing)
         {
-            if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()))
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
-            }
+            JumpAndDash();
 
-            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && shootingEnabled && shootTime >= nextTimeToFire)
             {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-            }
-
-            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
-            {
-                StartCoroutine(Dash());
+                Shoot();
+                shootTime = 0;
             }
         }
 
@@ -109,6 +117,33 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    void JumpAndDash()
+    {
+        if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
+        }
+
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    void Shoot()
+    {
+        animator.SetTrigger("Shoot");
+        GameObject newBullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
+        newBullet.transform.SetParent(temporaryObjects.transform);
+        newBullet.transform.localScale = new Vector2(transform.localScale.x, newBullet.transform.localScale.y);
+        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed * transform.localScale.x, 0);
     }
 
     public void Knockback()

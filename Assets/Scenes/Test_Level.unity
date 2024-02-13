@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &139229144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139229145}
+  m_Layer: 0
+  m_Name: -----------------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139229145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139229144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7188293, y: -5.147558, z: -0.029823212}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &152481963
 GameObject:
   m_ObjectHideFlags: 0
@@ -22144,6 +22175,7 @@ Transform:
   m_Children:
   - {fileID: 480090115}
   - {fileID: 1583815883}
+  - {fileID: 2107350305}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1261023176
@@ -22160,11 +22192,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck_1: {fileID: 480090115}
   groundCheck_2: {fileID: 1583815883}
+  shootPoint: {fileID: 2107350305}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 1261023177}
   trailRenderer: {fileID: 1261023181}
+  bulletPrefab: {fileID: 5910210922971405492, guid: d864bf5abb66b4047b18c6d32595eb13, type: 3}
+  temporaryObjects: {fileID: 2075678463}
   speed: 6
   jumpingForce: 16
   KBForce: 6
@@ -22174,6 +22209,9 @@ MonoBehaviour:
   dashingForce: 20
   dashingTime: 0.2
   dashingCooldown: 0.5
+  shootingEnabled: 1
+  bulletSpeed: 25
+  fireRate: 5
 --- !u!95 &1261023177
 Animator:
   serializedVersion: 5
@@ -22315,7 +22353,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.3
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -23082,6 +23120,68 @@ Transform:
   - {fileID: 378311513}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2075678463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2075678464}
+  m_Layer: 0
+  m_Name: Temporary Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2075678464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075678463}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7188293, y: -5.147558, z: -0.029823212}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2107350304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2107350305}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2107350305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107350304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8300002, y: -0.075, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1261023173}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2124838606
 GameObject:
   m_ObjectHideFlags: 0
@@ -23535,3 +23635,5 @@ SceneRoots:
   - {fileID: 836297985}
   - {fileID: 430695554}
   - {fileID: 642657313}
+  - {fileID: 2075678464}
+  - {fileID: 139229145}
