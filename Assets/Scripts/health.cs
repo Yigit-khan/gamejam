@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private Slider slider;
 
     public int health;
     public int maxHealth = 5;
@@ -12,16 +14,13 @@ public class Health : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        slider.value = health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void TakeDamage(int amount)
     {
         health -= amount;
+        slider.value = health;
         animator.SetTrigger("Hit");
 
         if (health <= 0)

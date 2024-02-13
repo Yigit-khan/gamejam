@@ -21614,6 +21614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1261023177}
+  slider: {fileID: 1763307510}
   health: 0
   maxHealth: 5
 --- !u!1001 &1437380197
@@ -22588,12 +22589,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 153221750}
+  - {fileID: 1104422140}
   - {fileID: 372141929}
   - {fileID: 977043052}
   - {fileID: 398915284}
   - {fileID: 378311513}
   - {fileID: 1261023173}
-  - {fileID: 1104422140}
   - {fileID: 430695554}
   - {fileID: 1508629018}
   - {fileID: 1912539033}
