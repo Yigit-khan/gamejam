@@ -18,7 +18,7 @@ public class Damage : MonoBehaviour
             }
             if(collision.transform.position.x > transform.position.x)
             {
-                collision.gameObject.GetComponent<PlayerMovement>().KnockbackDirection(true);
+                collision.gameObject.GetComponent<PlayerMovement>().KnockbackDirection(false);
             }
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
