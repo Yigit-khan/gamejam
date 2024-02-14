@@ -23664,6 +23664,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2278225676798089464, guid: 259e00c38af12e34a9dc7926c027c4ba, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2490291660629205249, guid: 259e00c38af12e34a9dc7926c027c4ba, type: 3}
       propertyPath: m_Name
       value: Pink Foe
