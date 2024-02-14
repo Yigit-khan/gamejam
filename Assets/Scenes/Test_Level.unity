@@ -22237,7 +22237,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5910210922971405492, guid: d864bf5abb66b4047b18c6d32595eb13, type: 3}
   temporaryObjects: {fileID: 2075678463}
   speed: 6
-  jumpingForce: 16
+  jumpingForce: 18
   KBForce: 6
   KBCounter: 0
   KBTotalTime: 0.2
@@ -23666,7 +23666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2278225676798089464, guid: 259e00c38af12e34a9dc7926c027c4ba, type: 3}
       propertyPath: damage
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2490291660629205249, guid: 259e00c38af12e34a9dc7926c027c4ba, type: 3}
       propertyPath: m_Name
