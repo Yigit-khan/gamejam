@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
     [SerializeField] private TrailRenderer trailRenderer;
-    [SerializeField] private Slider dashSlider; 
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject temporaryObjects;
 
@@ -51,13 +50,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         nextTimeToFire = 1 / fireRate;
         shootTime = 0;
-
-        if(dashIsEnabled)
-        {
-            dashSlider.maxValue = dashingCooldown;
-        }
-        
-
     }
     void Update()
     {
@@ -75,9 +67,6 @@ public class PlayerMovement : MonoBehaviour
                 shootTime = 0;
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
-            StartCoroutine(DashbarRecharge());
 
         animator.SetFloat("Horizontal Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("Vertical Speed", rb.velocity.y);
@@ -184,17 +173,5 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-    }
-
-    private IEnumerator DashbarRecharge()
-    {
-        dashSlider.value = 0f;
-        while (dashSlider.value < dashSlider.maxValue)
-        {
-            yield return new WaitForSeconds(dashingTime);
-            dashSlider.value += Time.deltaTime;
-            if (dashSlider.value > dashSlider.maxValue) dashSlider.value = dashSlider.maxValue;
-        }
-
     }
 }
