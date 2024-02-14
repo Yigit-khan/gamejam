@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    [Header("References")]
-    public PlayerMovement playerMovement;
-    public Health health;
-
     [Header("Settings")]
     [SerializeField] private int damage;
 
@@ -15,16 +11,22 @@ public class Damage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerMovement.Knockback();
+            collision.gameObject.GetComponent<PlayerMovement>().Knockback();
             if(collision.transform.position.x <= transform.position.x)
             {
-                playerMovement.KnockbackDirection(true);
+                collision.gameObject.GetComponent<PlayerMovement>().KnockbackDirection(true);
             }
             if(collision.transform.position.x > transform.position.x)
             {
-                playerMovement.KnockbackDirection(false);
+                collision.gameObject.GetComponent<PlayerMovement>().KnockbackDirection(true);
             }
-            health.TakeDamage(damage);
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+        }
+
     }
 }
