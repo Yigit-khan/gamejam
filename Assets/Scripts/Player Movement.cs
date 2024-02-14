@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
     [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] private Slider dashSlider; 
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject temporaryObjects;
 
@@ -49,6 +51,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         nextTimeToFire = 1 / fireRate;
         shootTime = 0;
+
+        if(dashIsEnabled)
+        {
+            dashSlider.maxValue = dashingCooldown;
+        }
+        
+
     }
     void Update()
     {
@@ -66,6 +75,9 @@ public class PlayerMovement : MonoBehaviour
                 shootTime = 0;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
+            StartCoroutine(DashbarRecharge());
 
         animator.SetFloat("Horizontal Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("Vertical Speed", rb.velocity.y);
@@ -121,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
 
     void JumpAndDash()
     {
+        //Jump
         if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
@@ -131,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
+        //Dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
         {
             StartCoroutine(Dash());
@@ -170,5 +184,17 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    private IEnumerator DashbarRecharge()
+    {
+        dashSlider.value = 0f;
+        while (dashSlider.value < dashSlider.maxValue)
+        {
+            yield return new WaitForSeconds(dashingTime);
+            dashSlider.value += Time.deltaTime;
+            if (dashSlider.value > dashSlider.maxValue) dashSlider.value = dashSlider.maxValue;
+        }
+
     }
 }
