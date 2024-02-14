@@ -27,7 +27,8 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            animator.SetTrigger("Death");
+            Destroy(gameObject,0.4f);
         }
     }
 
