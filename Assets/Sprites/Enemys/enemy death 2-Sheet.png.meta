@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 930acfb476752984bbf66cd0f787ad01
+guid: 28c738088556e3543801aaad9a5432cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,127 +149,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_death-Sheet_0
+      name: enemy death 2-Sheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 4
-        width: 22
-        height: 22
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a84e7127fbfca84186097eb85167ff6
-      internalID: 856119568
+      spriteID: 798f1100b43ea93419ce0dba1005af5e
+      internalID: 1878353980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_death-Sheet_1
+      name: enemy death 2-Sheet_1
       rect:
         serializedVersion: 2
-        x: 134
-        y: 4
-        width: 22
-        height: 22
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fed142ef28aa4943bf0b3c39114a107
-      internalID: 958356693
+      spriteID: 5362184e078bc3243a073523ae4f1eb7
+      internalID: 818229884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_death-Sheet_2
+      name: enemy death 2-Sheet_2
       rect:
         serializedVersion: 2
-        x: 262
-        y: 4
-        width: 22
-        height: 22
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9abd9c5dc57745a4f934255138c0aed9
-      internalID: 666399521
+      spriteID: b642754675f62844d894ec4336b33e9d
+      internalID: 517680946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_death-Sheet_3
+      name: enemy death 2-Sheet_3
       rect:
         serializedVersion: 2
-        x: 390
-        y: 4
-        width: 22
-        height: 22
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f1950067e42a964980028359310b142
-      internalID: 292281372
+      spriteID: 70ee7950eb10afc4e90d5d08085acac6
+      internalID: 300385075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_death-Sheet_4
+      name: enemy death 2-Sheet_4
       rect:
         serializedVersion: 2
-        x: 517
-        y: 4
-        width: 22
-        height: 22
+        x: 64
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2928f6e02d6ae24a805a348bd005b32
-      internalID: 400713042
+      spriteID: 685322725ec77e34e916f4dc87c05cfe
+      internalID: -599858555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_death-Sheet_9
+      name: enemy death 2-Sheet_9
       rect:
         serializedVersion: 2
-        x: 644
-        y: 2
-        width: 22
-        height: 22
+        x: 80
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9a645a5498bd0940993292895a29869
-      internalID: -113223268
+      spriteID: 4b31e51472f994c47858a3a94ae9ce39
+      internalID: -1802872060
       vertices: []
       indices: 
       edges: []
@@ -285,19 +285,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_death-Sheet_0: 856119568
-      player_death-Sheet_1: 958356693
-      player_death-Sheet_10: -1384353152
-      player_death-Sheet_11: -739955506
-      player_death-Sheet_12: 1913183589
-      player_death-Sheet_2: 666399521
-      player_death-Sheet_3: 292281372
-      player_death-Sheet_4: 400713042
-      player_death-Sheet_5: -412360660
-      player_death-Sheet_6: -461164455
-      player_death-Sheet_7: 46349033
-      player_death-Sheet_8: 924482438
-      player_death-Sheet_9: -113223268
+      enemy death 2-Sheet_0: 1878353980
+      enemy death 2-Sheet_1: 818229884
+      enemy death 2-Sheet_2: 517680946
+      enemy death 2-Sheet_3: 300385075
+      enemy death 2-Sheet_4: -599858555
+      enemy death 2-Sheet_5: -1495708263
+      enemy death 2-Sheet_6: 1857111247
+      enemy death 2-Sheet_7: 1273378215
+      enemy death 2-Sheet_8: 627497227
+      enemy death 2-Sheet_9: -1802872060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
