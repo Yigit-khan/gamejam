@@ -20,7 +20,7 @@ public class PinkFoeAttack : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(AttackPoint.position - new Vector3(0,0.2f), new Vector2(AttackRangeX, AttackRangeY), enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(AttackPoint.position - new Vector3(0,0.225f), new Vector2(AttackRangeX, AttackRangeY), enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
