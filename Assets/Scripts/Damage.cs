@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Damage : MonoBehaviour
@@ -27,6 +28,5 @@ public class Damage : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
         }
-
     }
 }

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4085720196205198857}
   - component: {fileID: 2527064049979286125}
   - component: {fileID: 7789787939593132583}
-  - component: {fileID: 5428362160818505234}
+  - component: {fileID: 7177854334262574406}
   m_Layer: 0
   m_Name: Tentacle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.625, y: 0.716568}
   m_EdgeRadius: 0
---- !u!114 &5428362160818505234
+--- !u!114 &7177854334262574406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4606305957752152039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2918cc4ea16b8438b7de9b6321ac36, type: 3}
+  m_Script: {fileID: 11500000, guid: a804f875ad56a5243a73cbec699a1d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2527064049979286125}
   damage: 1

@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 996022490356045711}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4017541, y: 0.05499983, z: 0}
+  m_LocalPosition: {x: 2.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 6129540159719772166}
   - component: {fileID: 6676434230397937024}
   - component: {fileID: 8963098429487180706}
+  - component: {fileID: 921090024251719269}
+  - component: {fileID: 1251783147409752154}
   - component: {fileID: 2278225676798089464}
   - component: {fileID: 5848112773232551657}
   m_Layer: 0
@@ -176,6 +178,56 @@ CircleCollider2D:
   m_Offset: {x: -0.03, y: -0.03}
   serializedVersion: 2
   m_Radius: 0.45959616
+--- !u!70 &921090024251719269
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490291660629205249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.5975058, y: -0.0000001904375}
+  m_Size: {x: 4.1950574, y: 1.0000185}
+  m_Direction: 1
+--- !u!114 &1251783147409752154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490291660629205249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d0d6113c102224f96def4a87d5c123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tentacle: {fileID: 4606305957752152039, guid: 9eb7bf3201d714447a70624da68d8f43, type: 3}
+  animator: {fileID: 6676434230397937024}
+  attackCooldown: 2
 --- !u!114 &2278225676798089464
 MonoBehaviour:
   m_ObjectHideFlags: 0
