@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         {
             JumpAndDash();
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && shootingEnabled && shootTime >= nextTimeToFire)
+            if (Input.GetButtonDown("Fire1") && shootingEnabled && shootTime >= nextTimeToFire)
             {
                 Shoot();
                 shootTime = 0;

@@ -10,8 +10,10 @@ public class Health : MonoBehaviour
     [SerializeField] private Slider slider;
 
     [Header("Settings")]
-    [SerializeField] private int health;
-    [SerializeField] private int maxHealth = 5;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private float deathDelay;
+
+    private int health;
 
     void Start()
     {
@@ -28,7 +30,16 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("Death");
-            Destroy(gameObject,0.4f);
+            Destroy(gameObject,deathDelay);
+        }
+    }
+
+    public void TakeHeal()
+    {
+        if(health != maxHealth)
+        {
+            health++;
+            slider.value = health;
         }
     }
 
