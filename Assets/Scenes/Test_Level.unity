@@ -22523,7 +22523,7 @@ MonoBehaviour:
   animator: {fileID: 1261023177}
   slider: {fileID: 1763307510}
   maxHealth: 5
-  deathDelay: 0
+  deathDelay: 0.4
 --- !u!96 &1261023181
 TrailRenderer:
   serializedVersion: 3
