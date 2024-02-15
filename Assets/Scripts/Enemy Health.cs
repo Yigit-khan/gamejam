@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private int health;
     [SerializeField] private int maxHealth = 5;
+    [SerializeField] private float deathDelay;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             animator.SetTrigger("Death");
-            Destroy(gameObject, 0.4f);
+            Destroy(gameObject, deathDelay);
         }
     }
 }
