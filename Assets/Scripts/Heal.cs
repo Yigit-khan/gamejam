@@ -8,6 +8,7 @@ public class Heal : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("PlayerHeal");
             collision.gameObject.GetComponent<Health>().TakeHeal();
 
             Destroy(gameObject);

@@ -294,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 153221748}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3300002, y: -4.577, z: -10}
+  m_LocalPosition: {x: 2.3300004, y: -4.577, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1122,7 +1122,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3300002, y: -4.577, z: -10}
+  m_LocalPosition: {x: 2.3300004, y: -4.577, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23775,6 +23775,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e60929e7ece19e544ab793696f33f391, type: 3}
+--- !u!1 &1719161502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1719161504}
+  - component: {fileID: 1719161505}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1719161504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719161502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1719161505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719161502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd198f0e6ccf50419e0b44de027be25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PlayerShoot
+    clip: {fileID: 8300000, guid: 14e0ca283dfc8ae46847b7abd20cfae4, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerJump
+    clip: {fileID: 8300000, guid: a2721c7b1428529499445de104ad0c8a, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerHeal
+    clip: {fileID: 8300000, guid: 6d623389878ecba479a604d2a077631c, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerHurt
+    clip: {fileID: 8300000, guid: 93490c9909423ee47b24d21ba664a9eb, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerDie
+    clip: {fileID: 8300000, guid: 57783fdce6e7d5343a42005faee8afcf, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerDash
+    clip: {fileID: 8300000, guid: 57783fdce6e7d5343a42005faee8afcf, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &1763307508
 GameObject:
   m_ObjectHideFlags: 0
@@ -25060,3 +25135,4 @@ SceneRoots:
   - {fileID: 642657313}
   - {fileID: 2075678464}
   - {fileID: 139229145}
+  - {fileID: 1719161504}
