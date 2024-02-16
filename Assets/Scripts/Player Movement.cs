@@ -34,8 +34,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool shootingEnabled;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float fireRate;
-    
-    
+
+    private int maxAmmo = 9; //Shoot
+    private int ammo = 0; //Shoot
     private float nextTimeToFire; //Shoot
     private float shootTime; //Shoot
     private bool canDash = true; //Dash
