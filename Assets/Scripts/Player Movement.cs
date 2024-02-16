@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
             if(horizontalInput != 0)
             {
-                // here
+                FindObjectOfType<AudioManager>().Play("PlayerWalk");
             }
         }
         else
