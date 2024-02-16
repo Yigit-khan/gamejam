@@ -24045,7 +24045,13 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: PlayerDash
-    clip: {fileID: 8300000, guid: 57783fdce6e7d5343a42005faee8afcf, type: 3}
+    clip: {fileID: 8300000, guid: eeaab7cc7dac34642805fc546b75f02a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerWalk
+    clip: {fileID: 8300000, guid: 962e1fa9558dc6c45ab4c05db27a592d, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
