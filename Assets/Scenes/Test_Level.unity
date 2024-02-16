@@ -23824,31 +23824,43 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 14e0ca283dfc8ae46847b7abd20cfae4, type: 3}
     volume: 0.6
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: PlayerJump
     clip: {fileID: 8300000, guid: a2721c7b1428529499445de104ad0c8a, type: 3}
     volume: 0.3
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: PlayerHeal
     clip: {fileID: 8300000, guid: 6d623389878ecba479a604d2a077631c, type: 3}
     volume: 0.3
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: PlayerHurt
     clip: {fileID: 8300000, guid: 93490c9909423ee47b24d21ba664a9eb, type: 3}
     volume: 0.3
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: PlayerDie
     clip: {fileID: 8300000, guid: 57783fdce6e7d5343a42005faee8afcf, type: 3}
     volume: 0.3
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 1c0074a90bb32bb44b689f33ec01163e, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
   - name: PlayerDash
     clip: {fileID: 8300000, guid: 57783fdce6e7d5343a42005faee8afcf, type: 3}
     volume: 0.3
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &1763307508
 GameObject:
