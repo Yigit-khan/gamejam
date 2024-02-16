@@ -148,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
         //Dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
         {
-
+            FindObjectOfType<AudioManager>().Play("PlayerDash");
             StartCoroutine(Dash());
         }
     }
