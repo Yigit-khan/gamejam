@@ -11,11 +11,12 @@ public class PinkFoeBehavior : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float attackCooldown;
 
+    private bool isDead = false;
     private bool inCooldown = false;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.transform.tag == "Player" && !inCooldown)
+        if(collision.transform.tag == "Player" && !inCooldown && !isDead)
         {
             animator.SetTrigger("Attack");
             GameObject newTentacle = Instantiate(tentacle, transform.position + new Vector3(2.25f * transform.localScale.x, 0), Quaternion.identity);
@@ -29,5 +30,10 @@ public class PinkFoeBehavior : MonoBehaviour
         inCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
         inCooldown = false;
+    }
+
+    public void DeathStatus()
+    {
+        isDead = true;
     }
 }

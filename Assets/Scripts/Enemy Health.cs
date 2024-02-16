@@ -23,6 +23,12 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            if(gameObject.GetComponent<PimbaaMovement>() != null)
+                gameObject.GetComponent<PimbaaMovement>().DeathStatus();
+
+            if(gameObject.GetComponent<PinkFoeBehavior>() != null)
+                gameObject.GetComponent<PinkFoeBehavior>().DeathStatus();
+
             animator.SetTrigger("Death");
             Destroy(gameObject, deathDelay);
         }

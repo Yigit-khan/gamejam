@@ -13,6 +13,7 @@ public class PimbaaMovement : MonoBehaviour
     private float direction = 1;
     private Vector2 patrolLocation;
     private float patrolStartDirection;
+    private bool isDead = false;
 
     private void Start()
     {
@@ -24,7 +25,8 @@ public class PimbaaMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+        if (!isDead)
+            rb.velocity = new Vector2(direction * speed, rb.velocity.y);
     }
 
     IEnumerator ChangeDirection()
@@ -40,5 +42,11 @@ public class PimbaaMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(patrolLocation, new Vector2(patrolLocation.x + (speed*patrolDuration*patrolStartDirection),patrolLocation.y));
+    }
+
+    public void DeathStatus()
+    {
+        isDead = true;
+        rb.velocity = new Vector2 (0,0);
     }
 }
