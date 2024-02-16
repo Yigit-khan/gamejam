@@ -125,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
         //Jump
         if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()))
         {
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
         }
 
@@ -136,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
         //Dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
         {
+
             StartCoroutine(Dash());
         }
     }
@@ -143,6 +145,7 @@ public class PlayerMovement : MonoBehaviour
     void Shoot()
     {
         animator.SetTrigger("Shoot");
+        FindObjectOfType<AudioManager>().Play("PlayerShoot");
         GameObject newBullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
         newBullet.transform.SetParent(temporaryObjects.transform);
         newBullet.transform.localScale = new Vector2(transform.localScale.x, newBullet.transform.localScale.y);

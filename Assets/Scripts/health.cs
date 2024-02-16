@@ -25,11 +25,13 @@ public class Health : MonoBehaviour
     {
         health -= amount;
         slider.value = health;
+        FindObjectOfType<AudioManager>().Play("PlayerHurt");
         animator.SetTrigger("Hit");
 
         if (health <= 0)
         {
             animator.SetTrigger("Death");
+            FindObjectOfType<AudioManager>().Play("PlayerDie");
             Destroy(gameObject,deathDelay);
         }
     }
