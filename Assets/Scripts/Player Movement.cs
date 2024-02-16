@@ -92,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
             if(horizontalInput != 0)
             {
-                FindObjectOfType<AudioManager>().Play("PlayerWalk");
             }
         }
         else
@@ -165,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void IncreaseAmmo()
     {
+        FindObjectOfType<AudioManager>().Play("PlayerTakeBullet");
         ammo++;
         if (ammo >= maxAmmo) ammo = maxAmmo;
     }
