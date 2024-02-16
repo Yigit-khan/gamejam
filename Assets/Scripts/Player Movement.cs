@@ -39,8 +39,10 @@ public class PlayerMovement : MonoBehaviour
     private int ammo = 0; //Shoot
     private float nextTimeToFire; //Shoot
     private float shootTime; //Shoot
+
     private bool canDash = true; //Dash
     private bool isDashing; //Dash
+
     private bool KnockFromRight; //Knockback
     private Rigidbody2D rb; //Rigidbody
     private float horizontalInput; //Movement
@@ -51,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         nextTimeToFire = 1 / fireRate;
         shootTime = 0;
+
+        ammo = maxAmmo;
     }
     void Update()
     {
@@ -62,10 +66,12 @@ public class PlayerMovement : MonoBehaviour
         {
             JumpAndDash();
 
-            if (Input.GetButtonDown("Fire1") && shootingEnabled && shootTime >= nextTimeToFire)
+            if (Input.GetButtonDown("Fire1") && shootingEnabled && shootTime >= nextTimeToFire && ammo>0)
             {
                 Shoot();
                 shootTime = 0;
+                ammo--;
+                if(ammo <= 0) ammo = 0;
             }
         }
 
@@ -84,6 +90,10 @@ public class PlayerMovement : MonoBehaviour
             if (isDashing)
                 return;
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+            if(horizontalInput != 0)
+            {
+                // here
+            }
         }
         else
         {
@@ -151,6 +161,17 @@ public class PlayerMovement : MonoBehaviour
         newBullet.transform.SetParent(temporaryObjects.transform);
         newBullet.transform.localScale = new Vector2(transform.localScale.x, newBullet.transform.localScale.y);
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed * transform.localScale.x, 0);
+    }
+
+    public void IncreaseAmmo()
+    {
+        ammo++;
+        if (ammo >= maxAmmo) ammo = maxAmmo;
+    }
+
+    public int BulletAmount()
+    {
+        return ammo;
     }
 
     public void Knockback()
