@@ -24050,8 +24050,8 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: PlayerWalk
-    clip: {fileID: 8300000, guid: 962e1fa9558dc6c45ab4c05db27a592d, type: 3}
+  - name: PlayerTakeBullet
+    clip: {fileID: 8300000, guid: a670929c2212a75488b97970d108c868, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
