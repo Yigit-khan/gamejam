@@ -90,9 +90,12 @@ public class PlayerMovement : MonoBehaviour
             if (isDashing)
                 return;
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+<<<<<<< Updated upstream
             if(horizontalInput != 0)
             {
             }
+=======
+>>>>>>> Stashed changes
         }
         else
         {
