@@ -204,6 +204,7 @@ MonoBehaviour:
   animator: {fileID: 6399293669314675338}
   health: 0
   maxHealth: 1
+  deathDelay: 0.4
 --- !u!95 &6399293669314675338
 Animator:
   serializedVersion: 5

@@ -294,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 153221748}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3300004, y: -4.577, z: -10}
+  m_LocalPosition: {x: 2.3300002, y: -4.577, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1122,7 +1122,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3300004, y: -4.577, z: -10}
+  m_LocalPosition: {x: 2.3300002, y: -4.577, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23973,7 +23973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4013290308954508974, guid: e60929e7ece19e544ab793696f33f391, type: 3}
       propertyPath: deathDelay
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5373310584367896006, guid: e60929e7ece19e544ab793696f33f391, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24111,15 +24111,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-<<<<<<< Updated upstream
   - name: PlayerTakeBullet
     clip: {fileID: 8300000, guid: a670929c2212a75488b97970d108c868, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1 &1763307508
 GameObject:
   m_ObjectHideFlags: 0
