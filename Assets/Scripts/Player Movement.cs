@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         nextTimeToFire = 1 / fireRate;
         shootTime = 0;
 
-        ammo = 9;
+        ammo = 1;
     }
     void Update()
     {
