@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float fireRate;
 
+    private bool gamePaused = false; //Pause
+
     private int maxAmmo = 9; //Shoot
     private int ammo = 0; //Shoot
     private float nextTimeToFire; //Shoot
@@ -66,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         {
             JumpAndDash();
 
-            if (Input.GetButtonDown("Fire1") && shootingEnabled && shootTime >= nextTimeToFire && ammo>0)
+            if (Input.GetButtonDown("Fire1") && shootingEnabled && shootTime >= nextTimeToFire && ammo>0 && !gamePaused)
             {
                 Shoot();
                 shootTime = 0;
@@ -89,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isDashing)
                 return;
-            rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+            if (!gamePaused) rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
         }
         else
         {
@@ -130,19 +132,19 @@ public class PlayerMovement : MonoBehaviour
     void JumpAndDash()
     {
         //Jump
-        if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()))
+        if (Input.GetButtonDown("Jump") && (IsGrounded_1() || IsGrounded_2()) && !gamePaused)
         {
             FindObjectOfType<AudioManager>().Play("PlayerJump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingForce);
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f && !gamePaused)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
         //Dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashIsEnabled && !gamePaused)
         {
             FindObjectOfType<AudioManager>().Play("PlayerDash");
             StartCoroutine(Dash());
@@ -195,5 +197,10 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    public void GameIsPaused()
+    {
+        gamePaused = !gamePaused;
     }
 }

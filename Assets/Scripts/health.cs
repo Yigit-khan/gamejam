@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     [Header("References")]
     [SerializeField] private Animator animator;
     [SerializeField] private Slider slider;
+    [SerializeField] private GameManager gameManager;
 
     [Header("Settings")]
     [SerializeField] private int maxHealth;
@@ -30,6 +31,8 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
+            StartCoroutine(PlayerDies());
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
             animator.SetTrigger("Death");
             FindObjectOfType<AudioManager>().Play("PlayerDie");
             Destroy(gameObject,deathDelay);
@@ -43,6 +46,12 @@ public class Health : MonoBehaviour
             health++;
             slider.value = health;
         }
+    }
+
+    IEnumerator PlayerDies()
+    {
+        yield return new WaitForSeconds(deathDelay-.1f);
+        gameManager.PlayerIsDead();
     }
 
 }
