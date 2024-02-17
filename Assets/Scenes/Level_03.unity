@@ -1150,6 +1150,10 @@ PrefabInstance:
       value: Spiked Trap (26)
       objectReference: {fileID: 0}
     - target: {fileID: 9004321978375914162, guid: 411c549ac62fd4845bcd4e523fad0ad1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004321978375914162, guid: 411c549ac62fd4845bcd4e523fad0ad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -453.95
       objectReference: {fileID: 0}
@@ -62900,6 +62904,10 @@ PrefabInstance:
       value: Spiked Trap (24)
       objectReference: {fileID: 0}
     - target: {fileID: 9004321978375914162, guid: 411c549ac62fd4845bcd4e523fad0ad1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004321978375914162, guid: 411c549ac62fd4845bcd4e523fad0ad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -474.95
       objectReference: {fileID: 0}
@@ -69375,6 +69383,10 @@ PrefabInstance:
       value: Spiked Trap (25)
       objectReference: {fileID: 0}
     - target: {fileID: 9004321978375914162, guid: 411c549ac62fd4845bcd4e523fad0ad1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004321978375914162, guid: 411c549ac62fd4845bcd4e523fad0ad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -463.95
       objectReference: {fileID: 0}
@@ -70386,7 +70398,7 @@ PrefabInstance:
       objectReference: {fileID: 464585652}
     - target: {fileID: 6755795021510788479, guid: db461d69f21b57e47b765c31630eed29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.41536
+      value: 35.8
       objectReference: {fileID: 0}
     - target: {fileID: 6755795021510788479, guid: db461d69f21b57e47b765c31630eed29, type: 3}
       propertyPath: m_LocalPosition.y
