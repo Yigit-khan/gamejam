@@ -16,7 +16,7 @@ public class GroundMove : MonoBehaviour
 
     private void Update()
     {
-        gameObject.GetComponent<Rigidbody2D>().velocity = (new Vector2(moveSpeed * Time.deltaTime * direction,0));
+        transform.Translate(new Vector2(moveSpeed * Time.deltaTime * direction,0));
     }
 
     IEnumerator ChangeDirection()
@@ -27,6 +27,22 @@ public class GroundMove : MonoBehaviour
             {
                 direction *= -1;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Player")
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            transform.DetachChildren();
         }
     }
 }
