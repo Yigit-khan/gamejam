@@ -155,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetTrigger("Shoot");
         FindObjectOfType<AudioManager>().Play("PlayerShoot");
+        screenshake.Instance.ShakeCamera(3f, 0.25f);
         GameObject newBullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
         newBullet.transform.SetParent(temporaryObjects.transform);
         newBullet.transform.localScale = new Vector2(transform.localScale.x, newBullet.transform.localScale.y);
