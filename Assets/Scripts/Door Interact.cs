@@ -18,8 +18,14 @@ public class DoorInteract : MonoBehaviour
             {
                 animator.SetTrigger("Open");
                 isDoorOpen = true;
-                gameManager.NextScene();
+                StartCoroutine(NextLevel());
             }
         }
+    }
+
+    IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(.5f);
+        gameManager.NextScene();
     }
 }
