@@ -95,7 +95,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyDeath
     clip: {fileID: 8300000, guid: 5696b7c90de516e43bbea3e6fba9360b, type: 3}
-    volume: 0.6
+    volume: 0.25
     pitch: 0.75
     loop: 0
     source: {fileID: 0}

@@ -68391,6 +68391,10 @@ PrefabInstance:
       value: BaseDoor
       objectReference: {fileID: 0}
     - target: {fileID: 6582775669662952202, guid: 496dabe0467634c4eb44ed13a33f53fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582775669662952202, guid: 496dabe0467634c4eb44ed13a33f53fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -215.59756
       objectReference: {fileID: 0}
