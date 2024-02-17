@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ebf2f2b8a5e9e2e41ad8bb2f4d2cb696
+guid: c2e6acb1a7a7dc844aa1a3cffc9bc448
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door-Sheet_0
+      name: door stone-Sheet_0
       rect:
         serializedVersion: 2
         x: 31
-        y: 16
+        y: 47
         width: 34
-        height: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405d06bf25c600f42a631c14c4a3a179
-      internalID: -982732208
+      spriteID: e9b34796e5d6f5543b9bb0274e7d354c
+      internalID: -148158165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_1
+      name: door stone-Sheet_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 16
+        x: 159
+        y: 47
         width: 34
-        height: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6faab4917f7dda4bba6382d3b42c3cd
-      internalID: 641638873
+      spriteID: d7297b2c482ab734f924ce4afd8e81fa
+      internalID: 514454705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_2
+      name: door stone-Sheet_2
       rect:
         serializedVersion: 2
-        x: 223
-        y: 16
+        x: 287
+        y: 47
         width: 34
-        height: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,41 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64fec9fa2bd384b4cb4bed5a98b2210d
-      internalID: -260182919
+      spriteID: 7e40c767af1ad0c4689d33e012315db1
+      internalID: -557481234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 16
-        width: 34
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e772ccd5fc7a61948b8294d952948706
-      internalID: 1816844908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door-Sheet_4
+      name: door stone-Sheet_3
       rect:
         serializedVersion: 2
         x: 415
-        y: 16
+        y: 47
         width: 34
-        height: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a18e79ac86d2c24994912a384fe8148
-      internalID: -211951710
+      spriteID: 36c58edbfbe711e43a34083d5dd3305d
+      internalID: -88252054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_5
+      name: door stone-Sheet_4
       rect:
         serializedVersion: 2
-        x: 511
-        y: 16
+        x: 543
+        y: 47
         width: 34
-        height: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +247,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34566cb2e9ccbc34ab7241566408e13a
-      internalID: 1444517973
+      spriteID: f8f1098755144a54daed1d6fc4445657
+      internalID: 226822747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door stone-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 47
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81088ac028f71fd46bc0af80110daf8d
+      internalID: 1364690405
       vertices: []
       indices: 
       edges: []
@@ -285,12 +285,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door-Sheet_0: -982732208
-      door-Sheet_1: 641638873
-      door-Sheet_2: -260182919
-      door-Sheet_3: 1816844908
-      door-Sheet_4: -211951710
-      door-Sheet_5: 1444517973
+      door stone-Sheet_0: -148158165
+      door stone-Sheet_1: 514454705
+      door stone-Sheet_2: -557481234
+      door stone-Sheet_3: -88252054
+      door stone-Sheet_4: 226822747
+      door stone-Sheet_5: 1364690405
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

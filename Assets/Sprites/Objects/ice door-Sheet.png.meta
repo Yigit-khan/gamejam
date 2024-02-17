@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ebf2f2b8a5e9e2e41ad8bb2f4d2cb696
+guid: 90b4b2090830db04880449986c8d9388
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,11 +149,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door-Sheet_0
+      name: ice door-Sheet_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 16
+        x: 47
+        y: 30
         width: 34
         height: 57
       alignment: 0
@@ -163,18 +163,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405d06bf25c600f42a631c14c4a3a179
-      internalID: -982732208
+      spriteID: fa5a4634ef7f08c43ba5d939bab32903
+      internalID: -347961623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_1
+      name: ice door-Sheet_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 16
+        x: 175
+        y: 30
         width: 34
         height: 57
       alignment: 0
@@ -184,18 +184,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6faab4917f7dda4bba6382d3b42c3cd
-      internalID: 641638873
+      spriteID: 9341d370bd0752c48a30b1b8096d4187
+      internalID: -614247386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_2
+      name: ice door-Sheet_2
       rect:
         serializedVersion: 2
-        x: 223
-        y: 16
+        x: 303
+        y: 30
         width: 34
         height: 57
       alignment: 0
@@ -205,18 +205,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64fec9fa2bd384b4cb4bed5a98b2210d
-      internalID: -260182919
+      spriteID: fca446f008cbeec4c9e2b5db674fd2e8
+      internalID: -1220459127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_3
+      name: ice door-Sheet_3
       rect:
         serializedVersion: 2
-        x: 319
-        y: 16
+        x: 431
+        y: 30
         width: 34
         height: 57
       alignment: 0
@@ -226,18 +226,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e772ccd5fc7a61948b8294d952948706
-      internalID: 1816844908
+      spriteID: 6759c3cb2bf2d3d459eaa4fbdadd2a86
+      internalID: -37046888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_4
+      name: ice door-Sheet_4
       rect:
         serializedVersion: 2
-        x: 415
-        y: 16
+        x: 559
+        y: 30
         width: 34
         height: 57
       alignment: 0
@@ -247,18 +247,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a18e79ac86d2c24994912a384fe8148
-      internalID: -211951710
+      spriteID: 85afb76ae26eaa6458fd84a3680497b7
+      internalID: 1012705561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door-Sheet_5
+      name: ice door-Sheet_5
       rect:
         serializedVersion: 2
-        x: 511
-        y: 16
+        x: 687
+        y: 30
         width: 34
         height: 57
       alignment: 0
@@ -268,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34566cb2e9ccbc34ab7241566408e13a
-      internalID: 1444517973
+      spriteID: 8f133a933e20b994b865559e52d17f01
+      internalID: 2095617665
       vertices: []
       indices: 
       edges: []
@@ -285,12 +285,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door-Sheet_0: -982732208
-      door-Sheet_1: 641638873
-      door-Sheet_2: -260182919
-      door-Sheet_3: 1816844908
-      door-Sheet_4: -211951710
-      door-Sheet_5: 1444517973
+      ice door-Sheet_0: -347961623
+      ice door-Sheet_1: -614247386
+      ice door-Sheet_2: -1220459127
+      ice door-Sheet_3: -37046888
+      ice door-Sheet_4: 1012705561
+      ice door-Sheet_5: 2095617665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

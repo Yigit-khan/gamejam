@@ -29,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
             if(gameObject.GetComponent<PinkFoeBehavior>() != null)
                 gameObject.GetComponent<PinkFoeBehavior>().DeathStatus();
 
+            FindObjectOfType<AudioManager>().Play("EnemyDeath");
             animator.SetTrigger("Death");
             Destroy(gameObject, deathDelay);
         }
