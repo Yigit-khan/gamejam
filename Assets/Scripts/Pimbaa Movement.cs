@@ -20,6 +20,7 @@ public class PimbaaMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(ChangeDirection());
 
+        direction = transform.localScale.x;
         patrolLocation = transform.position;
         patrolStartDirection = transform.localScale.x;
     }
