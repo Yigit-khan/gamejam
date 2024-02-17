@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class screenshake : MonoBehaviour
+public class ScreenShake : MonoBehaviour
 {
-    public static screenshake Instance { get; private set; }
+    public static ScreenShake Instance { get; private set; }
     private CinemachineVirtualCamera cinemachineVirtualCamera;
     private float shakeTimer;
     private float shakeTimerTotal;
