@@ -20,7 +20,7 @@ public class PinkFoeBehavior : MonoBehaviour
         {
             animator.SetTrigger("Attack");
             GameObject newTentacle = Instantiate(tentacle, transform.position + new Vector3(2.25f * transform.localScale.x, 0), Quaternion.identity);
-            newTentacle.transform.localScale = new Vector2(transform.localScale.x, newTentacle.transform.localScale.y);
+            newTentacle.transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y);
             StartCoroutine(AttackCooldown());
         }
     }
