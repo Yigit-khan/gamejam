@@ -47,13 +47,13 @@ MonoBehaviour:
   sounds:
   - name: PlayerShoot
     clip: {fileID: 8300000, guid: 14e0ca283dfc8ae46847b7abd20cfae4, type: 3}
-    volume: 0.6
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PlayerJump
     clip: {fileID: 8300000, guid: a2721c7b1428529499445de104ad0c8a, type: 3}
-    volume: 0.3
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
