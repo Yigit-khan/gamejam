@@ -61005,7 +61005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7691111299986084269, guid: e41bcc2f14eab0544afbd51f762c05a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000029802322
+      value: 0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 7691111299986084269, guid: e41bcc2f14eab0544afbd51f762c05a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -68102,7 +68102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9175304532408822370, guid: b978e4fd4e47e694b80f5b81c011ee8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000029802322
+      value: 0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 9175304532408822370, guid: b978e4fd4e47e694b80f5b81c011ee8b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -68390,6 +68390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 3363288085944285837, guid: 496dabe0467634c4eb44ed13a33f53fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2001965025, guid: ba29a84dece833a43b0962b069900ffe, type: 3}
     - target: {fileID: 6582775669662952202, guid: 496dabe0467634c4eb44ed13a33f53fc, type: 3}
       propertyPath: m_LocalScale.x
       value: -1

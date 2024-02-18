@@ -1291,6 +1291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert Door
       objectReference: {fileID: 0}
+    - target: {fileID: 3996944661168861352, guid: db461d69f21b57e47b765c31630eed29, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 464585652}
     - target: {fileID: 6755795021510788479, guid: db461d69f21b57e47b765c31630eed29, type: 3}
       propertyPath: m_LocalPosition.x
       value: 220.82874
